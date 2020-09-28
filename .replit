@@ -1,2 +1,2 @@
-language = "python3"
-run = ""
+language = "c"
+run = "gcc processo-seletivo.c -o main"
