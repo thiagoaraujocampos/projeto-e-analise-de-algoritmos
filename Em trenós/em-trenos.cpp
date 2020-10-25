@@ -1,14 +1,6 @@
-#include <limits.h>
 #include <stdio.h> 
-#include <float.h>
 
-/*
-9 12 4 2
-0 1 1.3 0 5 1.5 0 4 3.2 1 2 0.7 1 3 0.3 2 3 2.3 4 9 0.2 5 6 1.7 5 7 3.0 6 7 0.9 6 8 2.1 7 8 1.1
-8 7 7 5 5 8 2 3
-2
-8
-*/
+#define DBL_MAX 9999
 
 int minDistance(double dist[], int tam, bool sptSet[]) 
 { 
@@ -54,7 +46,6 @@ void dijkstra(double graph[], int vent[], int N, int tam, int src)
 	resultado[0] = dist[0];
 
 	for (int j=0; j<N*2; j=j+2) {
-		//printf("VENT? %.1lf\n", copia[vent[j]][vent[j+1]]);
 		if (copia[vent[j]][vent[j+1]] >= 1.0 || copia[vent[j]][vent[j+1]] <= 0.0) {
 			copia[vent[j]][vent[j+1]] = 1.0; 
 			copia[vent[j+1]][vent[j]] = 1.0;
